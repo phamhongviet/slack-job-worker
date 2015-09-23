@@ -64,7 +64,7 @@ func init() {
 func slackOPSWorker(queue string, args ...interface{}) error {
 	// parse job and print its argument
 	job := ParseJob(args)
-	fmt.Printf("JOB: %s\n", job)
+	fmt.Printf("%s, %s, %s, %s\n", job.Request, job.User, job.Channel, job.Timestamp)
 	return nil
 }
 
